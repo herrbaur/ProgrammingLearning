@@ -25,7 +25,7 @@ public class Befragung {
         p_i = 100.f * sc.nextInt() / h;
         System.out.println("Anteil: " + p_i + "%");
 
-        System.out.println("4. Schreiben in Vorlesungen mit? Anzahl:");
+        System.out.println("4. Hören bei Vorlesung zu? Anzahl:");
         p_i = 100.f * sc.nextInt() / h;
         System.out.println("Anteil: " + p_i + "%");
 
