@@ -25,6 +25,7 @@ public class Konto {
             System.out.println("Guthaben nach dem "+i+". Jahr: "+guthaben);
             guthaben = guthaben*(1+zins/100);
             }
+            break;
         case 2:
             System.out.println("Bitte geben Sie ihr Startguthaben ein:");                                   //Aufgabenteil c)
             guthaben = sc.nextDouble();
@@ -40,6 +41,7 @@ public class Konto {
                 System.out.println("Guthaben nach dem "+j+". Jahr: "+guthaben);
                 guthaben = guthaben+ guthaben_erhoehung*j*(zins/100);
             }
+            break;
         case 3:
             int jahrzaehler = 0;                                                                                      //Aufgabenteil d)
             double sparziel;
