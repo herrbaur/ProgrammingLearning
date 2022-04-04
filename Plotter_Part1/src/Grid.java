@@ -16,11 +16,9 @@ public class Grid extends JFrame {
         this.setTitle("Plotter");
         this.setVisible(true);
     }
-
     public static void main(String[] args) {
         new Grid();
     }
-
     // TODO: implementiere ein Koordinatenkreuz
     /**
      * coordinates zeichnet ein Koordinatenkreuz.
@@ -32,16 +30,17 @@ public class Grid extends JFrame {
         yAxis[1] = this.getHeight()/4;
         xAxis[2] = this.getWidth()*3/4;
         yAxis[2] = this.getHeight()*3/4;
-        g.drawLine(xAxis[1], yAxis[2], xAxis[2], yAxis[2]);
-		g.drawLine(xAxis[1], yAxis[1], xAxis[1], yAxis[2]);
+        yAxis[3] = this.getHeight()/2;
+        xAxis[3] = this.getWidth()/2;
+        g.drawLine(xAxis[1], yAxis[3], xAxis[2], yAxis[3]);
+		g.drawLine(xAxis[3], yAxis[1], xAxis[3], yAxis[2]);
     }
-
     // TODO: implementiere eine Achsenbeschriftung
     /**
      * labels zeichnet Achsenbeschriftungen bei ganzen Zahlen.
      */
     public void labels(Graphics g) {
-        
+
     }
 
     // TODO: implementiere einen Funktionsplot.
