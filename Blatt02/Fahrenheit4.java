@@ -15,8 +15,6 @@ package Blatt02;
 				System.out.print(fahrenheit + "°F = " + celsius + "°C       ");
 				if (i % NUM_PER_ROW == 0) {
 					System.out.println(" ");
-			
-					
 				}
 			}
 		}
