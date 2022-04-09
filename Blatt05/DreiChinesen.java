@@ -6,15 +6,15 @@ public class DreiChinesen {
                                     +"Da kam die Polizei: Ja was ist denn das?\n"
                                     +"Drei Chinesen mit dem Kontrabass.\n\n";
 
+
     public DreiChinesen(){
         System.out.println(Liedtext);
     }
-    public String printcentered(){
-        //String.split(Liedtext);
-        return(Liedtext);
-    }
+
+    
     public static void main(String[]args){
         new DreiChinesen();
+        new printcentered(Liedtext);
     }
                                     
 }
