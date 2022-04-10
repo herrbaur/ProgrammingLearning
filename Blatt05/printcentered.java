@@ -1,24 +1,28 @@
 package Blatt05;
-public class printcentered {
-    public printcentered(String Liedtext) {
-        int maxCount = 0;
-        String[] Liedteil = Liedtext.split("\n");
-        int[] anzahl = new int[4];
 
-        for (int i = 0; i < 4; i++) {
-            anzahl[i] = Liedteil[i].length();
-            if (anzahl[i] > maxCount) {
-                maxCount = anzahl[i];
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class printcentered {
+    public printcentered(String Text) {
+        int maxChar = 0;
+        ArrayList<String> parts = new ArrayList<String>(Arrays.asList(Text.split("\n")));
+        ArrayList<Integer> charCount = new ArrayList<Integer>();
+
+        for (int i = 0; i < parts.size(); i++) {
+            charCount.add(i, parts.get(i).length());
+            if (charCount.get(i) > maxChar) {
+                maxChar = charCount.get(i);
             }
         }
-        for (int j = 0; j < 4; j++) {
-            if (Liedteil[j].length() < maxCount) {
-                int blanks = (maxCount - Liedteil[j].length()) / 2;
+        for (int j = 0; j < parts.size(); j++) {
+            if (parts.get(j).length() < maxChar) {
+                int blanks = (maxChar - parts.get(j).length()) / 2;
                 for (; blanks > 0; blanks--) {
-                    Liedteil[j] = " " + Liedteil[j];
+                    parts.set(j, " " + parts.get(j));
                 }
             }
-            System.out.println(Liedteil[j]);
+            System.out.println(parts.get(j));
         }
     }
 }
