@@ -5,7 +5,7 @@ public class DreiChinesen {
             + "saßen auf der Straße und erzählten sich was.\n"
             + "Da kam die Polizei: Ja was ist denn das?\n"
             + "Drei Chinesen mit dem Kontrabass.\n\n";
-    static final String Vowel = "i";
+    static final char Vowel = 'i';
 
     public DreiChinesen() {
         System.out.println(Liedtext);

@@ -2,18 +2,22 @@ package Blatt05.Aufgabenteil02;
 
 public class Huhn {
     private String name;
-    private boolean hungrig;
+    private boolean hungrig = true;
 
     public Huhn(String huhnName){
         name = huhnName;
         hungrig = true;
-
     }
-    public void setHungrig(){
-
+    public boolean setHungrig(boolean Futter){
+        if(Futter = true){
+            hungrig = false;
+        }else{
+            hungrig = true;
+        }
+        return hungrig;
     }
-    public void getName(){
-        
+    public String getName(){
+        return name;
     }
     
 }
