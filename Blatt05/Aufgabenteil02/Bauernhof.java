@@ -1,3 +1,4 @@
+
 package Blatt05.Aufgabenteil02;
 
 public class Bauernhof {
