@@ -115,7 +115,11 @@ public class SudokuChecker{
 	 * @return true, falls Wert in Ordnung
 	 */
 	private boolean isValueOk(int wert) {
-		return true; // TODO
+		if(wert > 0 && wert <= ROW_SIZE){
+			return true;
+		}
+		else
+			return false; 
 	}
 	
 	
@@ -127,8 +131,13 @@ public class SudokuChecker{
 	 * @return true, falls Wert noch nicht vorhanden.
 	 */
 	private boolean isZeileOk(int zeile, int wert) {
-		// TODO		
-		return true;
+		boolean zeiletest = true;
+		for(int i = 0; i < ROW_SIZE ; i++){
+			if(	spielFeld[zeile][i] == wert){
+				zeiletest = false;
+			}
+		}	
+		return zeiletest;
 	}
 
 	
@@ -140,8 +149,13 @@ public class SudokuChecker{
 	 * @return true, falls Wert noch nicht vorhanden.
 	 */
 	private boolean isSpalteOk(int spalte, int wert) {
-		// TODO
-		return true;
+		boolean spaltetest = true;
+		for(int i = 0; i < ROW_SIZE ; i++){
+			if(	spielFeld[i][spalte] == wert){
+				spaltetest = false;
+			}
+		}	
+		return spaltetest;
 	}
 	
 	/**
@@ -153,8 +167,29 @@ public class SudokuChecker{
 	 * @return true, falls Wert noch nicht vorhanden.
 	 */
 	private boolean isBlockOk(int zeile, int spalte, int wert) {
-		// TODO
-		return true;
+		int counter = 0;
+        int[] startFeld = new int[2];
+
+        startFeld[0] = 3 * (zeile % 3);
+
+        startFeld[1] = 3 * (spalte % 3);
+
+
+        for(int i = startFeld[0]; i < startFeld[0] + 3; i++) {
+            for (int j = startFeld[0]; j < startFeld[0] + 3; j++) {
+                if(wert == spielFeld[i][j]) {
+                    counter++;
+                }
+            }
+        }
+
+        boolean blocktest;
+        if(counter > 1)
+            blocktest = false;
+        else
+            blocktest = true;
+
+        return blocktest;
 	}
 	
 	
