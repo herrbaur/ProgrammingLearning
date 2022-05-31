@@ -14,20 +14,23 @@ public class ArrayStatistik {
         System.out.println("Der Arithmetische Mittelwert ist: " +Mittelwert); 
     }
     public void MinMax(int [] Werte){
-        int Max = 0;
-        int Min = 0;
+        int Max = Integer.MIN_VALUE;
+        int Min = Integer.MAX_VALUE;
         int length = Werte.length;
-        for(int i=1; i <= length; i++) {
-            if (i==1){
-                Max = Werte[i-1];
-                Min = Werte[i-1];
-            }else if(Max < Werte[i-1]){
-                Max = Werte[i-1];
-            }else if(Min > Werte[i-1]){
-                Min = Werte[i-1];
+        for(int i=0; i < length; i++) {
+            if(Max < Werte[i]){
+                Max = Werte[i];
+            }else if(Min > Werte[i]){
+                Min = Werte[i];
             }
+
         }
-        System.out.println("Der Maximalwert des Arrays beträgt: "+Max+" und der Minimalwert beträgt: "+Min);
+        if(length != 0){
+            System.out.println("Der Maximalwert des Arrays beträgt: "+Max+" und der Minimalwert beträgt: "+Min);
+        }
+        else{
+            System.out.println("Leeres Array");
+        }
     }
     public void Median(int [] Werte){
         Arrays.sort(Werte);

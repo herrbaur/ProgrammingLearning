@@ -12,6 +12,7 @@ public class DreiChinesen {
     }
 
     public static void main(String[] args) {
+        new printcentered(Liedtext);
         new printVowels(Liedtext, Vowel);
     }
 

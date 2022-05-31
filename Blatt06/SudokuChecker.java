@@ -121,8 +121,7 @@ public class SudokuChecker{
 		else
 			return false; 
 	}
-	
-	
+
 	/**
 	 * Pruefen, ob ein gegebener Wert an gegebener Position in einer Zeile erlaubt ist.
 	 * 
@@ -174,7 +173,6 @@ public class SudokuChecker{
 
         startFeld[1] = 3 * (spalte % 3);
 
-
         for(int i = startFeld[0]; i < startFeld[0] + 3; i++) {
             for (int j = startFeld[0]; j < startFeld[0] + 3; j++) {
                 if(wert == spielFeld[i][j]) {
@@ -183,13 +181,7 @@ public class SudokuChecker{
             }
         }
 
-        boolean blocktest;
-        if(counter > 1)
-            blocktest = false;
-        else
-            blocktest = true;
-
-        return blocktest;
+        return counter<=1;
 	}
 	
 	
