@@ -14,7 +14,8 @@
 
 <body>
     <header class="header">
-        <img src="./images/location.png" class="header__image" alt="an image of a map and location">
+        <img src="./images/location.png" class="header__image" alt="an image of a map and location" width="34" height="30" >
+        
         <h1 class="header__title">GeoTagApp</h1>
         <nav class="header__navigation">
             <a href="#">About</a> | <a href="#">Help</a> | <a href="/">Home</a>
@@ -28,7 +29,7 @@
             <!-- ############### VS1Lab 1a Form 1 Start -->
             <form id="tag-form" action="/tagging" method="post">
                 
-
+                <div class="div1">
                 <label for="Latitude">Latitude:</label><br>
                 <input type="number" id="fLatitude" name="fLatitude" value="49.01379"><br>
                 <label for="Longitude">Longitude:</label><br>
@@ -38,7 +39,7 @@
                 <label for="Hashtag">Hashtag:</label><br>
                 <input type="text" id="fHashtag" name="fHashtag" value="e.g.#ber"><br><br>
                 <input type="submit" value="Add value">
-
+                </div>
             </form>
             <!-- ############### VS1Lab 1a Form 1 End -->
 
@@ -49,11 +50,11 @@
 
             <!-- ############### VS1Lab 1a Form 2 Start -->
             <form class="discovery__search" id="discoveryFilterForm" action="/discovery" method="post">
-
+                <div class="div2">
                 <label for="search">Search term or keywords:</label><br>
                 <input type="text" id="fHashtag" name="fHashtag" value="e.g. Berlin"><br><br>
                 <input type="submit" value="Search">
-
+                </div>
             </form>
             <!-- ############### VS1Lab 1a Form 2 End -->
 
