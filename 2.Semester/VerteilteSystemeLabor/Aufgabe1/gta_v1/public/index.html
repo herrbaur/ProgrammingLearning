@@ -27,8 +27,17 @@
 
             <!-- ############### VS1Lab 1a Form 1 Start -->
             <form id="tag-form" action="/tagging" method="post">
+                
 
-                <!-- ... your code here ... -->
+                <label for="Latitude">Latitude:</label><br>
+                <input type="number" id="fLatitude" name="fLatitude" value="49.01379"><br>
+                <label for="Longitude">Longitude:</label><br>
+                <input type="number" id="fLongitude" name="fLongitude" value="8.390071"><br>
+                <label for="Name">Name:</label><br>
+                <input type="text" id="fname" name="fname" value="e.g. Central Berlin"><br>
+                <label for="Hashtag">Hashtag:</label><br>
+                <input type="text" id="fHashtag" name="fHashtag" value="e.g.#ber"><br><br>
+                <input type="submit" value="Add value">
 
             </form>
             <!-- ############### VS1Lab 1a Form 1 End -->
@@ -41,7 +50,9 @@
             <!-- ############### VS1Lab 1a Form 2 Start -->
             <form class="discovery__search" id="discoveryFilterForm" action="/discovery" method="post">
 
-                <!-- ... your code here ... -->
+                <label for="search">Search term or keywords:</label><br>
+                <input type="text" id="fHashtag" name="fHashtag" value="e.g. Berlin"><br><br>
+                <input type="submit" value="Search">
 
             </form>
             <!-- ############### VS1Lab 1a Form 2 End -->
