@@ -44,6 +44,26 @@ a {
   color: var(--link-color);
 }
 
+b {
+  width: 300px;
+  border: 15px black;
+  padding: 50px;
+  margin: 20px;
+
+}
+.div1 {
+  width: 300px;
+  height: 500px;
+  padding: 50px;
+  border: 1px solid black;
+}
+.div2{
+  width: 600px;
+  height: 300px;
+  padding: 50px;
+  border: 1px solid black;
+}
+
 
 /* ### TODO ### Styles for other HTML elements */
 
